@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Users Data</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th> 
+         <th>action</th>
+         <th>action</th>
+    </tr>
+
+    <% result.forEach(function(user){ %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.age %></td>
+            <td><%= user.email %></td>
+            <td ><a href="/ui/delete/<%= user._id %>">delete</a></td>
+              <td ><a href="/ui/student/<%= user._id %>">update</a></td>
+        </tr>
+    <% }) %>
+
+</table>
+
+</body>
+</html>

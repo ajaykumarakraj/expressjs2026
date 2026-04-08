@@ -177,10 +177,7 @@ console.log(result)
 // res.send(result)
 res.render("form",{result})
 })
-
-
 app.get("/ui/student",async(req,res)=>{
-
 
   const db=connection.db(dbName)
 const dataconn=db.collection("company")

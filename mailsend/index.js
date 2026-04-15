@@ -12,8 +12,11 @@ const transpoter=nodemailer.createTransport({
     }
 })
 // get data and fetch by form 
-app.use(express.urlencoded({extended:false}))
+// app.use(express.urlencoded({extended:false}))
 
+//data by api
+
+app.use(express.json())
 app.get("/add-user",(req,res)=>{
 res.render('adduser')
 })

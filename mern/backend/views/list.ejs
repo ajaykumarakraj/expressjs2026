@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("navbar") %>
+    <!-- <h1>Task List Page</h1> -->
+
+    <div class="task-container">
+        <% result.forEach((task) => { %>
+            <div class="task-card">
+               <div>
+                 <h3><%= task.title %></h3>
+                <p><%= task.description %></p>
+               </div>
+                <div class="newbtn"><button><a href="/delete/<%= task._id %>" class="color">delete</a></button><button><a href="/update/<%= task._id %>" class="color">update</a></button></div>
+            </div>
+        <% }) %>
+    </div>
+
+</body>
+</html>

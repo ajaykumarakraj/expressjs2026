@@ -12,6 +12,7 @@ export default function App() {
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Loginn/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/' element={<Dashboard/>}/>
     </Routes>
     </BrowserRouter>
   )
